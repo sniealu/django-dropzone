@@ -8,7 +8,8 @@ class Picture(models.Model):
     problems installing pillow, use a more generic FileField instead.
     """
 
-    file = models.ImageField(upload_to="pictures")
+    #file = models.ImageField(upload_to="pictures")
+    file = models.FileField(upload_to="pictures")
 
     def __unicode__(self):
         return self.file.name

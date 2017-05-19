@@ -22,8 +22,6 @@ SECRET_KEY = 'im6wk^#s^tl#&32&+$-lci^qnq@luaeoqxk_c5umk8j!3#tnoe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -50,6 +48,21 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'django_dropzone_upload.urls'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 WSGI_APPLICATION = 'django_dropzone_upload.wsgi.application'
 
 
